@@ -5,6 +5,7 @@
   margin-bottom: 10px;
   width: 300px;
   background-color: rgb(153, 128, 81);
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.32);
 }
 
 .avatar {
