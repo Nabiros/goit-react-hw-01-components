@@ -1,4 +1,4 @@
-import styled from './stats.module.css';
+import styled from './ProfileStats.module.css';
 
 export const ProfileStats = ({ stats }) => {
   return (
