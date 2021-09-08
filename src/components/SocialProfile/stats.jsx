@@ -1,6 +1,6 @@
 import styled from './stats.module.css';
 
-const ProfileStats = ({ stats }) => {
+export const ProfileStats = ({ stats }) => {
   return (
     <ul className={styled.stats}>
       <li className={styled.items}>
@@ -18,5 +18,3 @@ const ProfileStats = ({ stats }) => {
     </ul>
   );
 };
-
-export default ProfileStats;

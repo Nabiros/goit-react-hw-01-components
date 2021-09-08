@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ProfileStats from './stats';
+import { ProfileStats } from './stats';
 import styled from './SocialProfile.module.css';
 
 export const SocialProfile = ({ avatar, name, tag, location, stats }) => {
