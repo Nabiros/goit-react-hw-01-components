@@ -3,7 +3,7 @@ import statisticalData from './data/statistical-data.json';
 import friends from './data/friends.json';
 import transactions from './data/transactions.json';
 
-import SocialProfile from './components/SocialProfile/SocialProfile.jsx';
+import { SocialProfile } from './components/SocialProfile/SocialProfile.jsx';
 import Statistics from './components/Statistics/Statistics.jsx';
 import FriendList from './components/FriendList/FriendList.jsx';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory.jsx';
@@ -17,9 +17,7 @@ export default function App() {
           tag={user.tag}
           location={user.location}
           avatar={user.avatar}
-          followers={user.stats.followers}
-          likes={user.stats.likes}
-          views={user.stats.views}
+          stats={user.stats}
         />
       }
 

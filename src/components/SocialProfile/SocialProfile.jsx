@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
+import ProfileStats from './stats';
 import styled from './SocialProfile.module.css';
 
-export default function SocialProfile(props) {
-  const { avatar, name, tag, location, followers, views, likes } = props;
-
+export const SocialProfile = ({ avatar, name, tag, location, stats }) => {
   return (
     <div className={styled.profile}>
       <div className={styled.description}>
@@ -12,31 +11,15 @@ export default function SocialProfile(props) {
         <p className={styled.tag}>@{tag}</p>
         <p className={styled.location}>{location}</p>
       </div>
-
-      <ul className={styled.stats}>
-        <li className={styled.items}>
-          <span className={styled.label}>Followers</span>
-          <span className={styled.quantity}>{followers}</span>
-        </li>
-        <li>
-          <span className={styled.label}>Views</span>
-          <span className={styled.quantity}>{views}</span>
-        </li>
-        <li>
-          <span className={styled.label}>Likes</span>
-          <span className={styled.quantity}>{likes}</span>
-        </li>
-      </ul>
+      <ProfileStats stats={stats} />
     </div>
   );
-}
+};
 
 SocialProfile.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number),
 };
